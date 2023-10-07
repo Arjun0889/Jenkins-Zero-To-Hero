@@ -3,10 +3,17 @@ pipeline {
   stages {
     stage('Back-end') {
       agent {
-        docker { image 'maven:3.8.1-adoptopenjdk-11' }
+        docker { image 'maven:3.8.3-openjdk-11-slim' }
       }
       steps {
-        sh 'mvn --version'
+        // Checkout your Java project from Git
+        git(url: 'https://github.com/yourusername/your-java-project.git', branch: 'main')
+        
+        // Build and test your Java application
+        sh 'mvn clean install'  // Modify this command as per your project's build process
+        
+        // Run the Java application
+        sh 'java -cp target/your-java-application.jar HelloWorld'
       }
     }
     stage('Front-end') {
@@ -14,7 +21,17 @@ pipeline {
         docker { image 'node:16-alpine' }
       }
       steps {
+        // Checkout your Node.js project from Git
+        git(url: 'https://github.com/yourusername/your-nodejs-project.git', branch: 'main')
+        
+        // Install Node.js dependencies
+        sh 'npm install'
+        
+        // Build and test your Node.js application
         sh 'node --version'
+        
+        // Run the Node.js application
+        sh 'node app.js'
       }
     }
   }
