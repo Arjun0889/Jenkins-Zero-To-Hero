@@ -25,16 +25,16 @@ pipeline {
       }
       steps {
         // Checkout your Node.js project from Git
-        git(url: 'https://github.com/Arjun0889/Jenkins-Zero-To-Hero.git', branch: 'main')
+        //git(url: 'https://github.com/Arjun0889/Jenkins-Zero-To-Hero.git', branch: 'main')
         
         // Install Node.js dependencies
-        sh 'npm install'
+        //sh 'npm install'
         
         // Build and test your Node.js application
         sh 'node --version'
         
         // Run the Node.js application
-        sh 'node app.js'
+        //sh 'node app.js'
       }
     }
   }
