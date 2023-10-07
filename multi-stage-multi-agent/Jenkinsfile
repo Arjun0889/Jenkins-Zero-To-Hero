@@ -13,7 +13,10 @@ pipeline {
         sh 'mvn clean install'  // Modify this command as per your project's build process
         
         // Run the Java application
-        sh 'java -cp target/your-java-application.jar HelloWorld'
+         sh 'javac HelloWorld.java'
+        
+        // Run the Java application
+        sh 'java HelloWorld'
       }
     }
     stage('Front-end') {
