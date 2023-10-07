@@ -7,7 +7,7 @@ pipeline {
       }
       steps {
         // Checkout your Java project from Git
-        git(url: 'https://github.com/yourusername/your-java-project.git', branch: 'main')
+        git(url: 'https://github.com/Arjun0889/Jenkins-Zero-To-Hero/blob/main/app.js', branch: 'main')
         
         // Build and test your Java application
         sh 'mvn clean install'  // Modify this command as per your project's build process
