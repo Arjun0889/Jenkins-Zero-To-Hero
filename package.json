@@ -1,0 +1,15 @@
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js application",
+  "main": "index.js",  // Entry point of your application
+  "scripts": {
+    "start": "node index.js",  // Command to start your Node.js application
+    "test": "echo \"Error: no test specified\" && exit 1"  // Placeholder for running tests
+  },
+  "author": "Arjun",
+  "license": "MIT",  // License type (choose one that applies)
+  "dependencies": {
+    // Add your project's dependencies here
+  }
+}
